@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancho de beyli 💕</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            background: url('rancho.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        .overlay{
+            background: rgba(0,0,0,0.2);
+            min-height: 100vh;
+            position: relative;
+        }
+        .titulo{
+            text-align: center;
+            padding: 20px;
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+            animation: brillar 2s ease-in-out infinite;
+        }
+        @keyframes brillar{
+            0%,100%{text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 0 0 20px #ff6b6b}
+            50%{text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 0 0 30px #ffe66d}
+        }
+        
+        /* Animales */
+        .animal{
+            position: absolute;
+            font-size: 50px;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .vaca{
+            bottom: 15%;
+            animation: caminar 20s infinite;
+        }
+        .caballo{
+            bottom: 20%;
+            animation: caminar 15s infinite reverse;
+            font-size: 60px;
+        }
+        .gallina{
+            bottom: 10%;
+            animation: picotear 3s infinite;
+        }
+        .pollito{
+            bottom: 8%;
+            animation: correr 8s infinite;
+            font-size: 30px;
+        }
+        
+        @keyframes caminar{
+            0%{left: -100px; transform: scaleX(1)}
+            49%{transform: scaleX(1)}
+            50%{left: 110%; transform: scaleX(-1)}
+            99%{transform: scaleX(-1)}
+            100%{left: -100px; transform: scaleX(1)}
+        }
+        @keyframes picotear{
+            0%,100%{transform: translateY(0) rotate(0deg)}
+            25%{transform: translateY(5px) rotate(-5deg)}
+            50%{transform: translateY(0) rotate(0deg)}
+            75%{transform: translateY(5px) rotate(5deg)}
+        }
+        @keyframes correr{
+            0%{left: 10%; transform: scaleX(1)}
+            25%{left: 40%; transform: scaleX(1)}
+            26%{transform: scaleX(-1)}
+            50%{left: 20%; transform: scaleX(-1)}
+            51%{transform: scaleX(1)}
+            75%{left: 60%; transform: scaleX(1)}
+            100%{left: 10%; transform: scaleX(1)}
+        }
+        
+        /* Sol animado */
+        .sol{
+            position: absolute;
+            top: 15%;
+            right: 10%;
+            font-size: 80px;
+            animation: girar 20s linear infinite;
+            filter: drop-shadow(0 0 20px #ffeb3b);
+        }
+        @keyframes girar{
+            from{transform: rotate(0deg)}
+            to{transform: rotate(360deg)}
+        }
+        
+        /* Nubes */
+        .nube{
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.8;
+            animation: flotar 30s linear infinite;
+        }
+        @keyframes flotar{
+            from{left: -150px}
+            to{left: 110%}
+        }
+        
+        .nube1{top: 10%; animation-duration: 35s}
+        .nube2{top: 18%; animation-duration: 40s; animation-delay: 5s}
+        
+        /* Mensaje abajo */
+        .mensaje{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.9);
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-size: 18px;
+            color: #ff6b6b;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1 class="titulo">Rancho de beyli 💕</h1>
+        
+        <!-- Sol -->
+        <div class="sol">☀️</div>
+        
+        <!-- Nubes -->
+        <div class="nube nube1">☁️</div>
+        <div class="nube nube2">☁️</div>
+        
+        <!-- Animales moviéndose -->
+        <div class="animal vaca" style="animation-delay: 0s">🐄</div>
+        <div class="animal vaca" style="animation-delay: 7s; bottom: 12%">🐄</div>
+        <div class="animal caballo" style="animation-delay: 3s">🐴</div>
+        <div class="animal gallina" style="left: 20%">🐔</div>
+        <div class="animal gallina" style="left: 70%; animation-delay: 1s">🐔</div>
+        <div class="animal pollito" style="animation-delay: 0s">🐤</div>
+        <div class="animal pollito" style="animation-delay: 2s">🐤</div>
+        <div class="animal pollito" style="animation-delay: 4s">🐤</div>
+        
+        <div class="mensaje">Bienvenido al ranchito más bonito 💕</div>
+    </div>
+</body>
+  </html>
